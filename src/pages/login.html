@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../styles.css" />
+		<link rel="stylesheet" href="../styles/login.css" />
+		<link rel="stylesheet" href="../styles/general.css" />
+		<script src="../scripts/login.js"></script>
+		<title>Login</title>
+	</head>
+	<body>
+		<div class="backgroundPages">
+			<div class="container">
+				<h3 class="title" id="loginTitle">
+					Ingrese sus datos para registrarse
+				</h3>
+				<form onsubmit="return sendForm(event)" id="formId">
+					<label>
+						<p>Ingrese su nombre:</p>
+						<input
+							id="nameId"
+							type="text"
+							placeholder="Nombre"
+							class="nameInput"
+							onblur="validation()"
+							autocomplete="off"
+						/>
+						<p id="nameValidation" class="validationsText"></p>
+					</label>
+					<hr />
+					<label>
+						<p>Ingrese su mail:</p>
+						<input
+							id="emailId"
+							type="email"
+							placeholder="Email"
+							class="nameInput"
+							onblur="validation()"
+							autocomplete="off"
+						/>
+						<p id="emailValidation" class="validationsText"></p>
+					</label>
+					<hr />
+					<label>
+						<p>Ingrese su edad:</p>
+						<input
+							id="edadId"
+							type="number"
+							placeholder="Edad"
+							class="nameInput"
+							onblur="validation()"
+							autocomplete="off"
+						/>
+						<p id="edadValidation" class="validationsText"></p>
+					</label>
+					<br />
+					<hr />
+					<div class="submitInputContainer">
+						<input type="submit" value="Enviar" class="submitInput" />
+					</div>
+				</form>
+				<div class="submitInputContainer">
+					<a href="../../index.html">
+						<input
+							type="submit"
+							value="Inicio"
+							class="submitInput"
+							id="backToHome"
+						/>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../styles/navBar.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/variety.css">
+    <link rel="stylesheet" href="../styles/recomendation.css">
+    <link rel="stylesheet" href="../styles/carousel.css">
+    <script src="../scripts/recomendations.js"></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+	<script src="../../script.js"></script>
+	<script src="../scripts/carousel.js"></script>
+    <title>AppTe - Recomendaciones</title>
+</head>
+<body onload="verifiedUserLogin(), initialCarousel()">
+    <div class="navBarContainer general__navText">
+        <div class="navBarLinks">
+            <a href="../../index.html">
+                <span class="iconify" data-inline="false" data-icon="carbon:home" style="color: #fafbeb; font-size: 50px;"></span>
+            </a>
+            <a href="./variedades.html"><p>Variedades</p></a>
+            <a href="#"><p>Recomendaciones</p></a>
+            <a href="./desafio.html"><p>Desafio de 30 dias</p></a>
+        </div>
+        <div class="navBarUserName">
+            <p id="userNameText"></p>
+            <a href="./login.html">
+                <button type="button" class="cardButton" id="register">
+                    Registrarse
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="backgroundPages">
+        <div class="recomendationContainer">
+            <div class="titlePage">
+                <h2>Recomendaciones</h2>
+            </div>
+            <div class="carouselContainer">
+                <div class="carousel">
+                  <img class="carouselPhoto" id="carouselPhoto0" src="../assets/te-amarillo.jpg">
+                  <img class="carouselPhoto" id="carouselPhoto1"         src="../assets/te-azul.jpg">
+                  <img class="carouselPhoto" id="carouselPhoto2"         src="../assets/te-blanco.jpg">
+                  <img class="carouselPhoto" id="carouselPhoto3"         src="../assets/te-verde.jpg">
+                  <img class="carouselPhoto" id="carouselPhoto4"         src="../assets/té-negro.jpg">
+                    
+                  <div class="carouselButtonNext" onclick="onNext()"></div>
+                  <div class="carouselButtonPrev" onclick="onBack()"></div>
+                </div>
+            </div>
+
+            <div class="recomendationSubtitle">
+                <h3>Que preferis?</h2>
+            </div>
+            <div class="recomendationSelect">
+                <select name="selectUserPrefs" id="selectUserPrefs" class="selectUserPrefs" default="defaultValue" onchange="selectFunc('../assets/')">
+                    <option value="defaultValue" selected="selected" disabled>
+                        Elije tu opcion
+                    </option>
+                    <option value="Frutos Rojos">
+                        Frutos Rojos
+                    </option>
+                    <option value="Citricos">
+                        Citricos
+                    </option>
+                    <option value="aromatizantes">
+                        Aromatizantes
+                    </option>
+                    <option value="Otras Frutas">
+                        Otras Frutas
+                    </option>
+                    <option value="Sin saborizantes">
+                        Sin Saborizantes
+                    </option>
+                </select>
+            </div>
+            <div class="recomendationSubtitle">
+                <h3>Te recomendamos lo siguiente</h3>
+            </div>
+            <div class="cardsContainer" id="cardsContainer">
+            </div>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <h4 id="modalTitle"></h4>
+                    <p id="modalText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="./src/styles/navBar.css" />
+		<link rel="stylesheet" href="./src/styles/general.css" />
+		<link rel="stylesheet" href="./src/styles/challenge.css" />
+		<link rel="stylesheet" href="./src/styles/recomendation.css" />
+		<link rel="stylesheet" href="./src/styles/variety.css" />
+		<link rel="stylesheet" href="./src/styles/login.css" />
+		<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+		<script src="script.js"></script>
+		<title>AppTe - Home</title>
+	</head>
+	<body onload="verifiedUserLogin()">
+		<div class="navBarContainer general__navText">
+			<div class="navBarLinks">
+				<a href="#">
+					<span
+						class="iconify"
+						data-inline="false"
+						data-icon="carbon:home"
+						style="color: #fafbeb; font-size: 50px"
+					></span>
+				</a>
+				<a href="./src/pages/variedades.html"><p>Variedades</p></a>
+				<a href="./src/pages/recomendaciones.html"><p>Recomendaciones</p></a>
+				<a href="./src/pages/desafio.html"><p>Desafio de 30 dias</p></a>
+			</div>
+			<div class="navBarUserName">
+				<p id="userNameText"></p>
+				<a href="src/pages/login.html">
+					<button type="button" class="cardButton" id="register">
+						Registrarse
+					</button>
+				</a>
+			</div>
+		</div>
+		<div class="homeBackground">
+			<div class="opacify"></div>
+			<div class="homeContainer">
+				<h1>Bienvenidos</h1>
+				<h3>Todo lo que necesitas saber sobre el té</h3>
+			</div>
+		</div>
+	</body>
+</html>

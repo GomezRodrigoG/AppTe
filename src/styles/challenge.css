@@ -1,0 +1,10 @@
+#olChallenge {
+	display: grid;
+	grid-template-columns: 28% 28% 28%;
+	justify-content: center;
+}
+
+#olChallenge li {
+	margin: 5px 12px 5px 5px;
+	font-size: 1.3rem;
+}

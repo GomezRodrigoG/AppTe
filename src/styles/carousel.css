@@ -1,0 +1,96 @@
+.carouselContainer {
+	overflow: hidden;
+	width: 90%;
+	height: 400px;
+	align-self: center;
+}
+
+.carouselContainer * {
+	box-sizing: border-box;
+}
+
+.carousel {
+	transform-style: preserve-3d;
+	height: 100%;
+}
+
+.carouselPhoto {
+	opacity: 0;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	transition: transform 0.5s, opacity 0.5s, z-index 0.5s;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.carouselPhotoActive {
+	opacity: 1;
+	position: relative;
+	z-index: 9;
+}
+
+.carouselPhoto.initial,
+.carouselPhoto.active {
+	opacity: 1;
+	position: relative;
+	z-index: 9;
+}
+
+.carouselPhoto.prev,
+.carouselPhoto.next {
+	z-index: 8;
+}
+
+/* Mover item previo a la izquierda */
+.carouselPhoto.prev {
+	transform: translateX(-100%);
+}
+
+/* Mover item siguiente a la derecha */
+.carouselPhoto.next {
+	transform: translateX(100%);
+}
+
+.carouselButtonPrev,
+.carouselButtonNext {
+	position: absolute;
+	top: 50%;
+	width: 3rem;
+	height: 3rem;
+	background-color: #fff;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 11; /* Para que siempre se vea adelante de todo */
+	border: 1px solid black;
+}
+
+.carouselButtonPrev {
+	left: 0;
+}
+
+.carouselButtonNext {
+	right: 0;
+}
+
+.carouselButtonPrev::after,
+.carouselButtonNext::after {
+	content: " ";
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	top: 50%;
+	left: 54%;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+	transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.carouselButtonNext::after {
+	left: 47%;
+	transform: translate(-50%, -50%) rotate(-45deg);
+}

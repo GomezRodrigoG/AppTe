@@ -1,0 +1,27 @@
+.navBarContainer {
+	align-items: center;
+	background-color: #b35819;
+	display: flex;
+	justify-content: space-between;
+	height: 100px;
+	position: sticky;
+	width: 100vw;
+}
+
+.navBarLinks {
+	display: flex;
+	align-items: center;
+}
+
+.navBarLinks svg {
+	margin-left: 30px;
+}
+
+.navBarLinks a {
+	margin-left: 5rem;
+	color: #fff;
+}
+
+.navBarUserName {
+	margin-right: 50px;
+}

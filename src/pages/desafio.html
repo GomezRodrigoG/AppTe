@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../styles/navBar.css">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/recomendation.css">
+    <link rel="stylesheet" href="../styles/variety.css">
+    <link rel="stylesheet" href="../styles/challenge.css">
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+    <script src="../scripts/challenge.js"></script>
+	<script src="../../script.js"></script>
+    <title>AppTe - Recomendaciones</title>
+</head>
+<body onload="randomChallenge(); verifiedUserLogin()">
+    <div class="navBarContainer general__navText">
+        <div class="navBarLinks">
+            <a href="../../index.html">
+                <span class="iconify" data-inline="false" data-icon="carbon:home" style="color: #fafbeb; font-size: 50px;"></span>
+            </a>
+            <a href="./variedades.html"><p>Variedades</p></a>
+            <a href="./recomendaciones.html"><p>Recomendaciones</p></a>
+            <a href="#"><p>Desafio de 30 dias</p></a>
+        </div>
+        <div class="navBarUserName">
+            <p id="userNameText"></p>
+            <a href="./login.html">
+                <button type="button" class="cardButton" id="register">
+                    Registrarse
+                </button>
+            </a>
+        </div>
+    </div>
+    <div class="backgroundPages">
+        <div class="recomendationContainer">
+            <div class="titlePage">
+                <h2>Desafio de los 30 dias</h2>
+            </div>
+            <div class="recomendationSubtitle">
+                <h3>Ponete a prueba y acepta nuestro desafio de los 30 dias</h2>
+            </div>
+            <div class="listContainer">
+                <ol id="olChallenge">
+                </ol>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

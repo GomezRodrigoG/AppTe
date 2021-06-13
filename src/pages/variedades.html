@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../styles.css" />
+		<link rel="stylesheet" href="../styles/navBar.css" />
+		<link rel="stylesheet" href="../styles/general.css" />
+		<link rel="stylesheet" href="../styles/variety.css" />
+		<link rel="stylesheet" href="../styles/recomendation.css" />
+		<script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+		<script src="../../script.js"></script>
+		<title>AppTe - Variedades</title>
+	</head>
+	<body onload="verifiedUserLogin(); loadVarietyCards('../assets/')">
+		<div class="navBarContainer general__navText">
+			<div class="navBarLinks">
+				<a href="../../index.html">
+					<span
+						class="iconify"
+						data-inline="false"
+						data-icon="carbon:home"
+						style="color: #fafbeb; font-size: 50px"
+					></span>
+				</a>
+				<a href="#"><p>Variedades</p></a>
+				<a href="./recomendaciones.html"><p>Recomendaciones</p></a>
+				<a href="./desafio.html"><p>Desafio de 30 dias</p></a>
+			</div>
+			<div class="navBarUserName">
+				<p id="userNameText"></p>
+				<a href="./login.html">
+					<button type="button" class="cardButton" id="register">
+						Registrarse
+					</button>
+				</a>
+			</div>
+		</div>
+		<div class="backgroundPages">
+			<div class="varietyContainer">
+				<div class="varietyTitle">
+					<h2>Variedades</h2>
+				</div>
+				<div class="cardsContainer" id="cardsContainer"></div>
+				<div id="myModal" class="modal">
+					<div class="modal-content">
+						<h4 id="modalTitle"></h4>
+						<p id="modalText"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
